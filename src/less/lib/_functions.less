@@ -1,0 +1,10 @@
+/**
+* Funcions
+*/
+.setTextColor(@color) when (lightness(@color) > 50) {
+    color: #000;
+}
+
+.setTextColor(@color) when (lightness(@color) <= 50) {
+    color: #fff;
+}

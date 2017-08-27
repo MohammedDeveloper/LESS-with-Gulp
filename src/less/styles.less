@@ -1,0 +1,99 @@
+@import 'lib/_variables';
+@import 'lib/_functions';
+
+/**
+*  LESS content
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: @body-font-family;
+    background: @body-bg-color;
+    line-height: 1.6;
+    text-align: center;
+    font-size: @body-font-size;
+}
+
+.container {
+    max-width: @container;
+    text-align: center;
+    margin: 0 auto;    
+
+    header {
+        background: @app-prim-color;
+        padding: @head-pad;
+        .setTextColor(@app-prim-color);
+        font-weight: @head-font-weight;
+        text-transform: uppercase;
+    }
+
+    nav {
+        padding: 0;
+        margin: 0;
+        background: @nav-bg-color;
+
+        ul {
+            list-style: none;
+            padding: 5px;   
+
+            li {
+                display: inline;
+                padding: 15px;
+
+                a {
+                    text-decoration: none;
+                    .setTextColor(@nav-bg-color);
+
+                    &:hover {
+                        color: @link-hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .section {
+        padding: 15px;
+        font: @section-content-font;
+        text-align: center;
+
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: none; 
+            cursor: pointer;
+        }
+    }    
+
+    #section-a {
+        .section;
+        background: @section-content-light;
+        .setTextColor(@section-content-light);
+        
+        .button-a {
+            .button;
+            background: @btn-content-dark;
+            border: none;
+            .setTextColor(@btn-content-dark);              
+        }
+    }
+
+    #section-b {
+        .section;
+        background: @section-content-dark;
+        .setTextColor(@section-content-dark);
+
+        .button-b {
+            .button;
+            background: @btn-content-light;
+            border: none;
+            .setTextColor(@btn-content-light);
+        }
+    }
+    
+}
+
